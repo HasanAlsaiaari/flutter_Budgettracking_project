@@ -7,6 +7,11 @@ class Homepage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFFF6F6F6),
+      appBar: AppBar(
+        title: Text("الصفحة الرئيسية"),
+        centerTitle: true,
+        backgroundColor: Color(0xFF1E88E5),
+      ),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(16.0),

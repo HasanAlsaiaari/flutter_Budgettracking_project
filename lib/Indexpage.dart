@@ -54,12 +54,6 @@ String _gettitle(int index)
   Widget build(BuildContext context) {
      
     return Scaffold(
-      appBar: AppBar(
-        title: Text(_gettitle(_bottomNavbar)),
-        centerTitle: true,
-        backgroundColor: Colors.blueGrey,
-        ),
-
         body: IndexedStack(
           index: _bottomNavbar,
           children: _pages,

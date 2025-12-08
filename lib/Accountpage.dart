@@ -78,7 +78,6 @@ class _AccountpageState extends State<Accountpage>
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
 
-            // صورة رمزية أو أيقونة كبيرة
             CircleAvatar(
               radius: 50,
               backgroundColor: Colors.blue.shade100,
@@ -88,7 +87,6 @@ class _AccountpageState extends State<Accountpage>
 
             SizedBox(height: 25),
 
-            // العنوان الرئيسي
             Text(
               "ملخص حسابك",
               style: TextStyle(
@@ -99,7 +97,7 @@ class _AccountpageState extends State<Accountpage>
 
             SizedBox(height: 20),
 
-            // بطاقة الدخل
+
             Container(
               padding: EdgeInsets.all(18),
               decoration: BoxDecoration(
@@ -125,7 +123,7 @@ class _AccountpageState extends State<Accountpage>
 
             SizedBox(height: 20),
 
-            // بطاقة المصروفات
+
             Container(
               padding: EdgeInsets.all(18),
               decoration: BoxDecoration(
@@ -142,7 +140,7 @@ class _AccountpageState extends State<Accountpage>
                       Text("إجمالي المصروفات",
                           style: TextStyle(
                               fontSize: 18, fontWeight: FontWeight.bold)),
-                      Text("$_totalExpenses ريال", style: TextStyle(fontSize: 16)),
+                      Text('$_totalExpenses ', style: TextStyle(fontSize: 16)),
                     ],
                   )
                 ],
@@ -151,7 +149,7 @@ class _AccountpageState extends State<Accountpage>
 
             SizedBox(height: 20),
 
-            // بطاقة الرصيد
+
             Container(
               padding: EdgeInsets.all(20),
               decoration: BoxDecoration(
@@ -166,7 +164,7 @@ class _AccountpageState extends State<Accountpage>
                       style:
                           TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
                   Text(
-                    "$_balance ريال",
+                    '$_balance ',
                     style: TextStyle(
                         fontSize: 22,
                         fontWeight: FontWeight.bold,

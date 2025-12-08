@@ -19,10 +19,10 @@ class _AddincomepageState extends State<AddIncomepage> {
    void _submitData() async {
     String enteredTitle = _titleController.text;
     double enteredAmount = double.tryParse(_amountController.text) ?? 0.0;
-    String enteredCatogery = _SourceController.text;
+    String enteredSource = _SourceController.text;
     String currentDate = DateTime.now().toLocal().toString();
 
-    if (enteredTitle.isEmpty || enteredAmount <= 0 || enteredCatogery.isEmpty) {
+    if (enteredTitle.isEmpty || enteredAmount <= 0 || enteredSource.isEmpty) {
       return;
     }
      
@@ -31,7 +31,7 @@ class _AddincomepageState extends State<AddIncomepage> {
      Description: enteredTitle,
      Date: currentDate);
 
-     bool result = await Ft.SaveDataToFile('IncomeData.txt', enteredCatogery);
+     bool result = await Ft.SaveDataToFile('IncomeData.txt', enteredSource);
 
      if (result) {
 
@@ -76,30 +76,59 @@ class _AddincomepageState extends State<AddIncomepage> {
         title: Text('إضافة دخل جديد'),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding:  EdgeInsets.all(16.0),
         child: Column(
           children: [
             TextField(
               controller: _titleController,
-              decoration: InputDecoration(labelText: 'الوصف'),
+              decoration: InputDecoration(
+                labelText: 'الوصف',
+                hintText: 'مثال: راتب شهر يناير',
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(15)
+                )
+                ),
             ),
+
+            SizedBox(height: 20),
+
             TextField(
               controller: _amountController,
-              decoration: InputDecoration(labelText: 'المبلغ'),
+              decoration: InputDecoration(
+                labelText: 'المبلغ',
+                hintText: 'مثال: 1500.00', 
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(15)
+                ), 
+                ),
               keyboardType: TextInputType.numberWithOptions(decimal: true),
             ),
+
+            SizedBox(height: 20),
+
             TextField(
               controller: _SourceController,
               decoration: InputDecoration(
                 labelText: 'المصدر',
-                hintText: 'مثال: راتب، مشروع، استثمار',
+                hintText: 'مثال: العمل، مشروع، استثمار',
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(15)
                 ),
+              )
             ),
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: _submitData,
-              child: Text('حفظ الدخل'),
+              child: Text('حفظ الدخل',
+              style: TextStyle(fontSize: 20,
+              fontWeight: FontWeight.bold),
+              ),
+              style: ElevatedButton.styleFrom(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15)
+                ),  
             ),
+            )
           ],
         ),
       ),

@@ -27,7 +27,8 @@ class _ListofincomsState extends State<Listofincoms> {
     setState(()
     {
       fileContent = Data;
-    });
+    }
+    );
     
       
     
@@ -40,7 +41,7 @@ class _ListofincomsState extends State<Listofincoms> {
         title: Text('قائمة الدخل'),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: EdgeInsets.all(16.0),
         child: SingleChildScrollView(
           child: Text(
             fileContent,

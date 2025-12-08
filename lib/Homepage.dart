@@ -14,7 +14,7 @@ class Homepage extends StatelessWidget {
       ),
       body: Center(
         child: Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding:  EdgeInsets.all(16.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -35,7 +35,7 @@ class Homepage extends StatelessWidget {
               ),
               SizedBox(height: 10),
               Text(
-                "قم بتسجيل دخلك ومصاريفك اليومية لتعرف كيف تتحكم في أموالك وتحقق أهدافك المالية.",
+                "قم بتسجيل دخلك ومصاريفك اليومية لتعرف كيف تتحكم في أموالك وتحقق أهدافك المالية",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 16,

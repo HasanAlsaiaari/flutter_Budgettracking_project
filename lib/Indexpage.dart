@@ -25,29 +25,7 @@ List<Widget>_pages = [
   Accountpage(),
 ];
 
-String _gettitle(int index)
-{
-  switch(index)
-  {
-    case 0:
-    return "الصفحة الرئيسية";
 
-    case 1:
-    return "صفحة الدخل";
-
-    case 2:
-    return "صفحة المصروفات";
-
-    case 3:
-    return "صفحة الحساب";
-
-    default:
-    return "Data";
-
-  }
-
-  
-}
 
 
   @override

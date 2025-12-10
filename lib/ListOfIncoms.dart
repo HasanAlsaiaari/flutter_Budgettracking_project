@@ -24,6 +24,7 @@ class _ListofincomsState extends State<Listofincoms> {
   Future<void> _LoadDataFromFile() async
   {
     String Data = await Ft.ReadDataFromFile('IncomeData.txt');
+
     setState(()
     {
       fileContent = Data;

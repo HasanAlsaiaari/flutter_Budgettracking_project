@@ -28,6 +28,7 @@ class _AddExpensePageState extends State<AddExpensePage> {
       (Amount: enteredAmount,
       Description: enteredTitle,
       Date: currentDate);
+
   
       bool result = await Ft.SaveDataToFile('ExpenseData.txt', enteredCatogry);
   
